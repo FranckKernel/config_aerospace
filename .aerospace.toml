@@ -52,7 +52,7 @@ automatically-unhide-macos-hidden-apps = false
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B",
                           "D", "E", "F", "G", "M", "N", "O", "P", 
-                         "R", "S", "T", "U", "V",  "X", "Y", "Z"]
+                         "R", "S", "T", "U", "V", "Y", "Z"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -175,7 +175,6 @@ gaps.outer.right =      0
     alt-t = 'workspace T'
     alt-u = 'workspace U'
     alt-v = 'workspace V'
-    alt-x = 'workspace X'
     alt-y = 'workspace Y'
     alt-z = 'workspace Z'
 
@@ -204,7 +203,6 @@ gaps.outer.right =      0
     alt-shift-t = 'move-node-to-workspace T'
     alt-shift-u = 'move-node-to-workspace U'
     alt-shift-v = 'move-node-to-workspace V'
-    alt-shift-x = 'move-node-to-workspace X'
     alt-shift-y = 'move-node-to-workspace Y'
     alt-shift-z = 'move-node-to-workspace Z'
 
@@ -215,6 +213,13 @@ gaps.outer.right =      0
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-esc = 'mode service'
+
+
+alt-x = 'mode X'
+[mode.X.binding]
+	# A mode to just pass keys through!
+	alt-x = 'mode main'
+	# Useful for keys that don't work, when you need to type them 
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
