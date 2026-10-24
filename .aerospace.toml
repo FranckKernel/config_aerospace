@@ -54,7 +54,7 @@ automatically-unhide-macos-hidden-apps = false
 # This config option is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B",
-                          "D", "E", "F", "G", "M", "N", "O", "P", 
+                          "D", "E", "M", "N", "O", "P", 
                          "R", "T", "U", "V", "Y", "Z"]
 
 # A callback that runs every time binding mode changes
@@ -113,9 +113,10 @@ gaps.outer.right =      0
     # 'tell application "Terminal" to tell (do script) to activate' '''
 
 
-	# alt-enter = 'exec-and-forget open -n -a Kitty tmux'
+	# PROGRAM STARTING/EXECUTING Bindings
+
 	# alt-enter = 'exec-and-forget "$HOME/.config/aerospace/terminal_tmux.sh kitty"'
-	alt-enter = 'exec-and-forget "$HOME/.config/aerospace/terminal_tmux.sh terminal"'
+	alt-enter = 'exec-and-forget $HOME/.config/aerospace/terminal_tmux.sh terminal'
 
 	# alt-w = 'exec-and-forget open -a Firefox'
 	# alt-w = 'exec-and-forget open -a Safari'
@@ -163,6 +164,9 @@ gaps.outer.right =      0
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
 
+	alt-f = 'fullscreen'
+	alt-g = 'macos-native-fullscreen'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
@@ -177,8 +181,6 @@ gaps.outer.right =      0
     alt-b = 'workspace B'
     alt-d = 'workspace D'
     alt-e = 'workspace E'
-    alt-f = 'workspace F'
-    alt-g = 'workspace G'
     alt-m = 'workspace M'
     alt-n = 'workspace N'
     alt-o = 'workspace O'
@@ -203,8 +205,6 @@ gaps.outer.right =      0
     alt-shift-b = 'move-node-to-workspace B'
     alt-shift-d = 'move-node-to-workspace D'
     alt-shift-e = 'move-node-to-workspace E'
-    alt-shift-f = 'move-node-to-workspace F'
-    alt-shift-g = 'move-node-to-workspace G'
     alt-shift-m = 'move-node-to-workspace M'
     alt-shift-n = 'move-node-to-workspace N'
     alt-shift-o = 'move-node-to-workspace O'
