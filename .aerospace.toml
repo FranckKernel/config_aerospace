@@ -13,6 +13,11 @@ after-startup-command = [
 	'exec-and-forget "$HOME/.config/sketchybar/sketchybar_toggle.sh"',
 ]
 
+exec-on-workspace-change = ['/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+]
+
+
 # Start AeroSpace at login
 start-at-login = true
 
@@ -80,7 +85,7 @@ gaps.inner.horizontal = 0
 gaps.inner.vertical =   0
 gaps.outer.left =       0
 gaps.outer.bottom =     0
-gaps.outer.top =        0
+gaps.outer.top =       23
 gaps.outer.right =      0
 
 # 'main' binding mode declaration
@@ -124,7 +129,7 @@ gaps.outer.right =      0
 
 	alt-c = 'exec-and-forget open -a Finder'
 
-	alt-t = 'exec-and-forget ~/.config/sketchybar/sketchybar_toggle.sh'
+	# alt-t = 'exec-and-forget ~/.config/sketchybar/sketchybar_toggle.sh'
 	ctrl-alt-t = 'exec-and-forget ~/.config/sketchybar/sketchybar_toggle.sh'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
@@ -258,3 +263,6 @@ inherit-env-vars = true
 
 [exec.env-vars]
 PATH = '${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/Homebrew/bin:/usr/local/Homebrew/sbin:/usr/local/bin:${PATH}'
+
+
+
