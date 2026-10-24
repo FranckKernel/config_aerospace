@@ -6,6 +6,7 @@
 # Fallback value (if you omit the key): config-version = 1
 config-version = 2
 
+
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
@@ -112,9 +113,14 @@ gaps.outer.right =      0
     # 'tell application "Terminal" to tell (do script) to activate' '''
 
 
-	alt-enter = 'exec-and-forget open -a Kitty tmux'
+	# alt-enter = 'exec-and-forget open -n -a Kitty tmux'
+	# alt-enter = 'exec-and-forget "$HOME/.config/aerospace/terminal_tmux.sh kitty"'
+	alt-enter = 'exec-and-forget "$HOME/.config/aerospace/terminal_tmux.sh terminal"'
+
 	# alt-w = 'exec-and-forget open -a Firefox'
-	alt-w = 'exec-and-forget open -a Safari'
+	# alt-w = 'exec-and-forget open -a Safari'
+	alt-w = 'exec-and-forget open -a Zen'
+
 	alt-c = 'exec-and-forget open -a Finder'
 
 	alt-t = 'exec-and-forget ~/.config/sketchybar/sketchybar_toggle.sh'
@@ -245,3 +251,10 @@ alt-x = 'mode X'
 
 	esc = 'mode main'
 	alt-esc = 'mode main'
+
+
+[exec]
+inherit-env-vars = true
+
+[exec.env-vars]
+PATH = '${HOME}/.local/bin:${HOME}/.cargo/bin:${HOME}/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/Homebrew/bin:/usr/local/Homebrew/sbin:/usr/local/bin:${PATH}'
