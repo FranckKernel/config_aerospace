@@ -124,7 +124,7 @@ gaps.outer.right =      0
     alt-period = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
 	alt-shift-q = 'close'
-	alt-semicolon = 'close'
+	cmd-semicolon = 'close'
 
 
 	
